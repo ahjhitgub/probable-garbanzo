@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="bills, bestie">
+<meta name="theme-color" content="#5BCEFA">
+<title>bills, bestie</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAJYElEQVR42u2de1BUVRzH711wFSYRFiRh0cDdROShjWWoDFhmpeILzTEfNdOoodljrLSsfPRu7DWlGWVTTTYKomlJg5mpwQK+SFBrTRZcEkRYQDDWx+xe+qN/FOHuXbh77znnfj9/Lpcz9/72c3/nd86ecy8/r/Q6B0Bn6BACADkA5ACQA0AOADkA5ACQA0AOADkA5AAAcgDIASAHgBwAcgDIASAHgBwAcgDIAQDkAJADQA4AOQDkAJADQA4AOQDkAJADAMgBIAeAHAByACXg27LzEQWAzAG8w1+zV568bpX0g0vWvI1uBTbAFS3JIaMTWrOEWTl86oRGLGFNDoWdYNsSduRQXQv2FGFBjm5rUX76uJTDkuJHalMR6uXwygyJNsjoCtV+UCyHRC1kEaKHolCqCK1ySDHDp1p4qwiNftAnh0ctFHOiG5bQpQhlcoiboaIW0hWhyA8dzJAd8TMhasjNSOYQiSk5WkhPIVTkDwrkoCVhsNfFkC4HjQmDmRSigxnqViEklyBUrgSjywx6z5lcObq6pWiMsviZE5s8dDADftAkB6tmUOeHDmbAD7oLUpbMoOiKyJKj01uHPTNErouo5KGDGfCjK7S7qelGfvox75WXV9/4yc5dOeY7TRoPCymZQ4Npg/zkoYMZHMdx7e3wg9bRis/dQAjIlIOEDqW9XWU9yEweJGYO5UsN1eUgs8BSWQ5CKi8S5CAwPsRlDlVuIELkIC15aHGew+12W61nTpSWVVWdczgcDQ2O8+drOhwzZ/b80FCDwWAICwsdEDnAaDRGRUUOHDQwOjq6d2+9RgLFq3jTdLp4znd3jyAIBQWW3Owdhw8fvXr1ajczrU4XFWU0mU3x8XEJifHD4ocFB/ejNyY0yeG7KPy0e8+GTzdduFAnb7ORkRH5+/bQGxatdyt1dRfXrn6jyFKMeQtqClJl7o+Ks7Z5cx6jy4xb49DtZ0AwOM8hFw0NjswnlzU0OJADIEdHVr+6rv5iPb5jyuRQIE8WWYothUXMfE+q9CykFKSyFxxbvtsqZawxc9aMu+8ZeerU6fXvfXjjn7blbAkxhDQ2NjY6GittVWfPVpz9u8Jmq3S5XMpEQ606g/3RSlubs7ioRPyY6TOmvvLay//PaNXU1Hb4q16vj4gYEBExgOO4tHGp/3/odDqPHS09XHKkqKjEVmFjvlthU47yspNut1ssSw9PXPv6azqdd71qYGBgalpKaloKx3G2ClteXn552UnIQRl2u91j2vDWjA6YzKZnnn0KBSl9tVVz8yXxA4JDglGT0jGUlb0aFUT7FI7jzlXZSe8ZCfiFls15jn79PPwYlpuzw+l0YiZDi3KEGELED6itvbB44dLq6n9ggOYKUilbTsrLTk5Nzxg9Ovne5FH19ZhI1YwcsbFDwsJCHY5GT6WJYCks6nQidW/+L62tyXcOMfft2xdysMb4Cfdnb93e7X/P+nxz1uebOY6LNEYmJSWMuGv46DHJMTHRmpJDhcU+yvxYX3+xfvLEadeuXZexzUF3DHro4QkZGdOMUUZmAqW5gpTjuPDbw5/MXCRvm9X26i+zvpo8cfry51bYbJUYrVDMwsVPTJ8xVfZmBUH4dd/+RzIe3fTZF4IgQA5aWbPu1XkLHvVFyy6Xa9PGrJUvriJ2zwvk8ICfn9/Kl17Y/HXW0KGxvmh/b/6+D9//GHJQzKhRd2fnfv/pxo/GpozR+cl8yd9+s+WP0hMYytI8KuP5tHGpaeNSGxubDvx2sLDAcvxYaUtLqyyNb/jks6+++QJDWZ+M0DiVNk9X2ir/PP2X1fr30aPHrH+d6UlrP/y43WQazFiUVOhWCNkRyvO8yWyaMi39xZXLH3t8foe/msymoKAg6a0dLjnCXtzw8JbOWf/+O4XFB3bv2bF0WaYUS44dYfAJVZBDjJiY6Mwli3buyh44MEr8SNk3WkIOOgi/PfylVSvEj7nU0gI5FK1SyWHM2GTxJy+0yjTwISoa6shB3TMk/fz8gkRXl/Xq1Yu9iLHZrWzbmvP2m+/Zz8m2UFRwC62tYrnB49ozdCuk0Nbm3LY1Z2r6zKWZz/x+qLDn29QsluJrV6+Jla7Rd7AXRtVmSG/d8ZcUP1Le5Nne3l5YYCkssNzW97bU1JQHJtw/NmVMQECAt+3U1tS+9ea74sfcNXKE7woOPLzFh/x7+d+f8/J/zsv39/c3m03D4uPi4obGxg0J79/fEGro06fPrf/icruamppstqpDB37P3b5TfKk6z/Pjx9/HYOZw5uwl52xkTx4dv3KXy2o9Y7XeNFMeEBCg13csJ2fPnCu92bRxqZHGSN+NU9T6jtSsOQh5peqVK1d68gucXq9/bvnTTEYJk2A9ZcXK5wcPjmHy0oiTg/DZsA4se3rJ7DmzWL12leUg/GXuIgQFBa3/4N3FmQsZjg+Jo5Wel6XzF8w1mwf/tv/goYMFTU1N8p5e7z69MzKmZy5ZJO/EF4Epk2/Lzlf9JHz3Vg1BEE6f+vP48T/KTpSVnSj3uAdO7Dby9x8+ImnCg+MnTZ4o71OLuzJD9bTK+DyHTqdLTEpITErguAUcx9XVXayqPGe32+326vP/1DQ3N7e0tLZcutR6+bLgvmmTQXBwP4PBENY/LCrKGB0THRcXm5iUEBgYqKlam4jMwan9Sp6dubvWrnnjpk8UfAEgmWmDoNFKp7FQrhvmyRqdEVKnY56D4ziO53kEgWg5VEweaslBctogLnOo3LnADBq7FV/7oXzmoMJ44uTo6tbxaTQVlqOrayFtvpjEzKG8HzzMoKhbUdoPpTIHRWYQXXMo6Ycy3QpdZnCUTp/LvmAsfcqk9CmTUIHSNFoRuaXoirXI2ZK8aIGU31ZEEH9lN+H7o8QlJnw5CwVyeFSEWD8oTRj0yUFXCqE6YdBRc3gVU3KqEDbMoCxzSMkf6qYQj4LStWaWPjkkKqKkJVKSFo1LqWmVQ6IfvlZEYl9G6SJ7iuXwShEZRfGquKF37wULcnjrRzdc6XapS7UZjMjRQ0WUH1hBDo0qwoYWbMqhliUsOcG+HMpYwqQTGpLDF5aw7YQW5eiJKxqxAXIAyXLMK72OKIBOwXZIADkA5ACQA0AOADkA5ACQA0AOADkA5AAAcgDIASAHgBwAcgDIASAHgBwAcgDIAQDkAJADQA4AOQDkAJADQA4AOQDkAJADAMgBIAeAHAByAEX4D/A/3Xt/+oCTAAAAAElFTkSuQmCC">
+<style>
+:root{
+  --blue:#5BCEFA; --pink:#F5A9B8; --flagwhite:#FFFFFF;
+  --bg:#F7FBFF; --surface:#FFFFFF; --blush:#FDEFF3; --sky:#E8F6FE;
+  --ink:#2D2A32; --muted:#6B6574; --line:#E3E8F1; --line-pink:#F4CFD9;
+  --link:#1F5CE0; --green:#1E7A45; --green-bg:#E3F6E8;
+  --red:#B32E45; --red-bg:#FCE7E9; --amber:#7F5400; --amber-bg:#FFE9B3;
+  --input:#FFFCEF; --tabbar:rgba(255,255,255,.94); --track:#EDF1F7;
+  --display:"Bricolage Grotesque", "Avenir Next", "Helvetica Neue", system-ui, sans-serif;
+  --body:"Figtree", "Avenir Next", -apple-system, "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16141C; --surface:#211E29; --blush:#35222D; --sky:#172A36;
+    --ink:#F4EFF7; --muted:#A79FB2; --line:#322E3C; --line-pink:#56364A;
+    --link:#8FD9FB; --green:#74D69E; --green-bg:#16331F;
+    --red:#FF9DAC; --red-bg:#3F1D27; --amber:#FFD27A; --amber-bg:#3A2D13;
+    --input:#262230; --tabbar:rgba(28,25,35,.94); --track:#2C2836;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16141C; --surface:#211E29; --blush:#35222D; --sky:#172A36;
+  --ink:#F4EFF7; --muted:#A79FB2; --line:#322E3C; --line-pink:#56364A;
+  --link:#8FD9FB; --green:#74D69E; --green-bg:#16331F;
+  --red:#FF9DAC; --red-bg:#3F1D27; --amber:#FFD27A; --amber-bg:#3A2D13;
+  --input:#262230; --tabbar:rgba(28,25,35,.94); --track:#2C2836;
+  color-scheme: dark;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+img{max-width:100%}
+
+.flag{display:flex;flex-direction:column;height:10px;border-radius:0 0 6px 6px;overflow:hidden}
+.flag i{flex:1}
+.flag i:nth-child(1),.flag i:nth-child(5){background:var(--blue)}
+.flag i:nth-child(2),.flag i:nth-child(4){background:var(--pink)}
+.flag i:nth-child(3){background:var(--flagwhite)}
+
+main{max-width:560px;margin:0 auto;padding:0 18px calc(96px + env(safe-area-inset-bottom,0px))}
+.screen{display:none}
+.screen.on{display:block}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:22px 0 14px}
+h1{font-family:var(--display);font-weight:800;font-size:34px;line-height:1.02;letter-spacing:-.02em;margin:0;font-variation-settings:"opsz" 72}
+h2{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.01em;margin:28px 0 10px}
+.sub{color:var(--muted);font-size:15px;margin:4px 0 0}
+.btn{border:0;border-radius:999px;padding:10px 16px;font-weight:700;font-size:15px;background:var(--ink);color:var(--bg);white-space:nowrap}
+.btn.soft{background:var(--sky);color:var(--ink)}
+.btn.pink{background:var(--pink);color:#2D2A32}
+.btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn.danger{background:var(--red-bg);color:var(--red)}
+.link{background:none;border:0;padding:0;color:var(--link);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+/* affirmation: the loud thing */
+.affirm{background:var(--blush);border:1.5px solid var(--line-pink);border-radius:26px;padding:20px 20px 16px;position:relative;overflow:hidden}
+.affirm .lead{font-size:14px;font-weight:600;color:var(--muted);margin:0}
+.affirm blockquote{margin:8px 0 12px;font-family:var(--display);font-weight:700;font-size:27px;line-height:1.12;letter-spacing:-.015em;font-variation-settings:"opsz" 60;min-height:2.2em}
+.affirm .row{display:flex;justify-content:space-between;align-items:center}
+.affirm .stripes{position:absolute;right:-26px;top:-26px;width:92px;height:92px;border-radius:50%;overflow:hidden;display:flex;flex-direction:column;opacity:.55;transform:rotate(-18deg)}
+.affirm .stripes i{flex:1}
+.affirm .stripes i:nth-child(1),.affirm .stripes i:nth-child(5){background:var(--blue)}
+.affirm .stripes i:nth-child(2),.affirm .stripes i:nth-child(4){background:var(--pink)}
+.affirm .stripes i:nth-child(3){background:var(--flagwhite)}
+
+/* alerts */
+.alerts{display:flex;flex-direction:column;gap:8px}
+.alert{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:12px 14px}
+.alert .ic{flex:0 0 36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:18px;background:var(--sky)}
+.alert.l0{border-color:var(--red);background:var(--red-bg)}
+.alert.l0 .ic{background:var(--surface)}
+.alert.l1{border-color:#E7B84A;background:var(--amber-bg)}
+.alert.l1 .ic{background:var(--surface)}
+.alert .at{display:block;font-weight:700;line-height:1.25;color:var(--ink)}
+.alert .as{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.empty{background:var(--surface);border:1.5px dashed var(--line);border-radius:16px;padding:18px;color:var(--muted);text-align:center}
+.empty b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}
+
+/* payday */
+.payday{background:var(--sky);border-radius:20px;padding:16px 18px}
+.payday .big{font-family:var(--display);font-weight:800;font-size:40px;line-height:1;letter-spacing:-.02em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.payday ul{list-style:none;margin:12px 0 0;padding:0;border-top:1.5px solid rgba(91,206,250,.45)}
+.payday li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid rgba(91,206,250,.3);font-size:15px}
+.payday li:last-child{border-bottom:0}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{font-size:14px;color:var(--muted)}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:14px 16px}
+
+/* totals */
+.totals{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stat{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:10px 12px}
+.stat small{display:block;color:var(--muted);font-size:13px;font-weight:600}
+.stat strong{font-family:var(--display);font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+
+/* bill cards */
+.list{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.bill{display:block;width:100%;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:14px 16px}
+.bill .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.bill .name{font-weight:700;font-size:17px;line-height:1.25}
+.bill .amt{font-family:var(--display);font-weight:800;font-size:22px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
+.tag{font-size:13px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.chip{font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px}
+.s-funded,.h-set{background:var(--green-bg);color:var(--green)}
+.s-overdue,.h-overdue{background:var(--red-bg);color:var(--red)}
+.s-week,.h-today{background:var(--amber-bg);color:var(--amber)}
+.s-soon,.h-coming{background:var(--blush);color:var(--red)}
+.s-track,.h-weekish{background:var(--sky);color:var(--link)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin:2px 0 12px}
+.facts div small{display:block;font-size:12.5px;color:var(--muted);font-weight:600}
+.facts div span{font-weight:600;font-variant-numeric:tabular-nums}
+.meter{height:12px;border-radius:6px;background:var(--track);overflow:hidden}
+.meter i{display:block;height:100%;min-width:0;border-radius:6px;background:linear-gradient(to bottom,var(--blue) 0 20%,var(--pink) 20% 40%,var(--flagwhite) 40% 60%,var(--pink) 60% 80%,var(--blue) 80% 100%);transition:width .5s ease}
+.meterlbl{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted);margin-top:6px;gap:10px}
+.bill .notes{margin:10px 0 0;font-size:14px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+.hint{font-size:14px;color:var(--amber);background:var(--amber-bg);border-radius:10px;padding:8px 10px;margin:0 0 10px}
+
+
+/* money */
+.paycheck{background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:16px}
+.paycheck label{font-weight:700;display:block;margin-bottom:8px}
+.moneyin{display:flex;align-items:center;background:var(--input);border:2px solid #F0D98A;border-radius:14px;padding:4px 14px}
+.moneyin span{font-family:var(--display);font-weight:700;font-size:28px;color:var(--muted)}
+.moneyin input{border:0;background:transparent;font-family:var(--display);font-weight:800;font-size:32px;width:100%;padding:6px 4px;outline:none;font-variant-numeric:tabular-nums}
+.ledger{margin-top:14px}
+.ledger div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.ledger div:last-child{border-bottom:0}
+.ledger .left strong{font-family:var(--display);font-size:24px;font-weight:800}
+.pos{color:var(--green)} .neg{color:var(--red)}
+.vibe{margin-top:12px;border-radius:16px;padding:14px 16px;font-weight:600;font-size:16px;line-height:1.35}
+.vibe.bad{background:var(--red-bg);color:var(--red)}
+.vibe.meh{background:var(--amber-bg);color:var(--amber)}
+.vibe.good{background:var(--green-bg);color:var(--green)}
+.bars{display:flex;flex-direction:column;gap:12px}
+.barrow .lbl{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;font-weight:600;margin-bottom:4px}
+.bartrack{height:14px;border-radius:7px;background:var(--track);overflow:hidden}
+.bartrack i{display:block;height:100%;border-radius:7px}
+.cattable{width:100%;border-collapse:collapse;font-size:14.5px}
+.cattable th{white-space:nowrap;text-align:right;font-weight:600;color:var(--muted);font-size:13px;padding:6px 4px;border-bottom:1.5px solid var(--line)}
+.cattable th:first-child,.cattable td:first-child{text-align:left}
+.cattable td{text-align:right;padding:8px 4px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.cattable tr.zero td{color:var(--muted);opacity:.7}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* nya~ corner */
+:root{--st1:#CDEFFD;--st2:#FCDDE5;--st3:#FFFFFF;--catblue:#1C86BA;--catpink:#D9567B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--st1:#183746;--st2:#46283A;--st3:#2A2633;--catblue:#8FD9FB;--catpink:#FFB3C6}}
+:root[data-theme="dark"]{--st1:#183746;--st2:#46283A;--st3:#2A2633;--catblue:#8FD9FB;--catpink:#FFB3C6}
+.stage{position:relative;overflow:hidden;border-radius:30px;border:2.5px solid var(--ink);padding:18px 14px 6px;display:flex;flex-direction:column;align-items:center;
+  background:linear-gradient(to bottom,var(--st1) 0 20%,var(--st2) 20% 40%,var(--st3) 40% 60%,var(--st2) 60% 80%,var(--st1) 80% 100%)}
+.bubble{position:relative;z-index:2;background:var(--surface);color:var(--ink);border:2.5px solid var(--ink);border-radius:22px;box-shadow:4px 4px 0 var(--ink);padding:12px 16px;
+  font-family:var(--display);font-weight:700;font-size:20px;line-height:1.22;letter-spacing:-.005em;text-align:center;width:100%;max-width:330px;min-height:84px;display:flex;align-items:center;justify-content:center}
+.bubble::after{content:"";position:absolute;bottom:-11px;left:50%;width:18px;height:18px;background:var(--surface);border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
+.bubble.pop{animation:pop .38s cubic-bezier(.2,1.7,.4,1)}
+@keyframes pop{0%{transform:scale(.86)}100%{transform:scale(1)}}
+.kitty{position:relative;z-index:1;background:none;border:0;padding:0;margin-top:6px;width:min(290px,86%);-webkit-tap-highlight-color:transparent}
+.kitty svg{display:block;width:100%;height:auto;overflow:visible}
+.kitty.spin svg{animation:hop .8s cubic-bezier(.3,.7,.3,1)}
+@keyframes hop{0%{transform:translateY(0) rotate(0)}45%{transform:translateY(-46px) rotate(190deg)}100%{transform:translateY(0) rotate(360deg)}}
+.floaties span{position:absolute;bottom:70px;z-index:0;font-family:var(--display);font-weight:800;font-size:22px;opacity:0;animation:rise 4.4s linear infinite;pointer-events:none}
+.floaties span:nth-child(odd){color:var(--catblue)} .floaties span:nth-child(even){color:var(--catpink)}
+.floaties span:nth-child(1){left:8%;animation-delay:0s}
+.floaties span:nth-child(2){left:82%;animation-delay:.7s}
+.floaties span:nth-child(3){left:18%;animation-delay:1.5s;font-size:18px}
+.floaties span:nth-child(4){left:74%;animation-delay:2.2s}
+.floaties span:nth-child(5){left:6%;animation-delay:2.9s}
+.floaties span:nth-child(6){left:84%;animation-delay:3.6s;font-size:17px}
+.floaties span:nth-child(7){left:26%;animation-delay:4s;font-size:18px}
+@keyframes rise{0%{transform:translateY(0) rotate(-10deg);opacity:0}12%{opacity:.95}100%{transform:translateY(-320px) rotate(14deg);opacity:0}}
+.catnote{text-align:center;margin:12px 0 0}
+@media (prefers-reduced-motion: reduce){.floaties{display:none}.bubble.pop,.kitty.spin svg{animation:none}}
+
+/* guide */
+.guide ol{padding-left:0;list-style:none;counter-reset:s;margin:0}
+.guide li{counter-increment:s;background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:14px 16px 14px 56px;margin-bottom:10px;position:relative}
+.guide li::before{content:counter(s);position:absolute;left:14px;top:14px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;background:var(--pink);color:#2D2A32}
+.guide li:nth-child(even)::before{background:var(--blue)}
+.guide li b{display:block;font-size:16.5px;margin-bottom:3px}
+.guide p{margin:0 0 10px}
+.guide li p{margin:4px 0 0;font-size:15px}
+
+/* tab bar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--tabbar);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-top:1px solid var(--line);padding:6px 6px env(safe-area-inset-bottom,0px)}
+.tabbar nav{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.tabbar button{background:none;border:0;padding:6px 2px 8px;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:11.5px;font-weight:600;color:var(--muted);position:relative}
+.tabbar button .e{font-size:22px;line-height:1.2;filter:grayscale(.6);opacity:.75}
+.tabbar button[aria-selected="true"]{color:var(--ink)}
+.tabbar button[aria-selected="true"] .e{filter:none;opacity:1}
+.tabbar button[aria-selected="true"]::after{content:"";position:absolute;bottom:2px;width:18px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--blue) 0 33%,var(--pink) 33% 66%,var(--blue) 66%)}
+.badge[hidden]{display:none!important}
+.badge{position:absolute;top:2px;left:calc(50% + 6px);min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--red);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
+:root[data-theme="dark"] .badge{color:#2D2A32}
+:root[data-theme="dark"] .affirm .stripes{opacity:.85}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .badge{color:#2D2A32}:root:not([data-theme="light"]) .affirm .stripes{opacity:.85}}
+
+/* sheet */
+.scrim{position:fixed;inset:0;background:rgba(20,16,28,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+.scrim.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:50;max-width:560px;margin:0 auto;background:var(--surface);border-radius:26px 26px 0 0;max-height:92%;display:flex;flex-direction:column;transform:translateY(105%);visibility:hidden;transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility 0s linear .28s;padding-bottom:env(safe-area-inset-bottom,0px)}
+.sheet.on{transform:none;visibility:visible;transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility 0s}
+.sheet .grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:8px auto 0}
+.sheet header{display:flex;justify-content:space-between;align-items:center;padding:10px 18px 8px}
+.sheet header h3{font-family:var(--display);font-weight:800;font-size:22px;margin:0}
+.sheet .inner{overflow-y:auto;padding:4px 18px 18px;-webkit-overflow-scrolling:touch}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:700;font-size:14.5px;margin-bottom:5px}
+.field .help{font-size:13px;color:var(--muted);margin-top:4px}
+.field input,.field select,.field textarea{width:100%;font-size:16px;background:var(--input);border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;min-height:46px;-webkit-appearance:none;appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:34px}
+.field textarea{min-height:76px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(91,206,250,.3)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.err{color:var(--red);font-size:14px;font-weight:600;margin:-4px 0 12px}
+.actions{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-top:6px}
+.preview{background:var(--bg);border-radius:14px;padding:10px 12px;font-size:14px;margin-bottom:14px}
+.preview div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.preview div span:first-child{color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14.5px;opacity:0;pointer-events:none;transition:all .25s;z-index:60;white-space:nowrap}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="flag" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<main>
+  <section class="screen" id="s-home" aria-label="Home"></section>
+  <section class="screen" id="s-bills" aria-label="Bills"></section>
+  <section class="screen" id="s-money" aria-label="Money"></section>
+  <section class="screen" id="s-kitty" aria-label="nya corner">
+    <div class="head"><div><h1>nya~ corner</h1><p class="sub">tap her for more financial wisdom :3</p></div></div>
+    <div class="stage">
+      <div class="bubble" id="bubble" aria-live="polite">paying your bills on time is so kewl :3</div>
+      <div class="floaties" aria-hidden="true"><span>♪</span><span>♡</span><span>:3</span><span>♫</span><span>♡</span><span>nya</span><span>✦</span></div>
+      <button class="kitty" id="kitty" type="button" aria-label="dancing catgirl. tap for a new message">
+        <svg id="kittySvg" viewBox="0 0 300 370" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <pattern id="sockStripes" width="300" height="30" patternUnits="userSpaceOnUse">
+              <rect width="300" height="6" fill="#5BCEFA"/><rect y="6" width="300" height="6" fill="#F5A9B8"/><rect y="12" width="300" height="6" fill="#FFFFFF"/><rect y="18" width="300" height="6" fill="#F5A9B8"/><rect y="24" width="300" height="6" fill="#5BCEFA"/>
+            </pattern>
+          </defs>
+          <ellipse cx="150" cy="352" rx="56" ry="9" fill="#2D2A32" opacity=".16"><animate attributeName="rx" values="56;44;56" dur="0.6s" repeatCount="indefinite"/></ellipse>
+          <g><animateTransform attributeName="transform" type="rotate" values="-4 150 345;4 150 345;-4 150 345" dur="1.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur="0.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".3 0 .5 1;.5 0 .7 1"/>
+            <!-- tail -->
+            <g><animateTransform attributeName="transform" type="rotate" values="-12 178 250;18 178 250;-12 178 250" dur="0.9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+              <path d="M176 250 C216 256 240 232 234 198 C231 182 240 170 252 171" fill="none" stroke="#2D2A32" stroke-width="21" stroke-linecap="round"/>
+              <path d="M176 250 C216 256 240 232 234 198 C231 182 240 170 252 171" fill="none" stroke="#F5A9B8" stroke-width="15" stroke-linecap="round"/>
+              <path d="M235 186 C236 178 243 171 252 171" fill="none" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round"/>
+            </g>
+            <!-- back hair (tilts with head) -->
+            <g><animateTransform attributeName="transform" type="rotate" values="-7 150 176;7 150 176;-7 150 176" dur="1.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+              <path d="M94 124 C90 64 210 64 206 124 L212 196 Q198 206 184 192 L184 160 L116 160 L116 192 Q102 206 88 196 Z" fill="#F5A9B8" stroke="#2D2A32" stroke-width="3" stroke-linejoin="round"/>
+            </g>
+            <!-- legs + programmer socks -->
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0;0 0" keyTimes="0;0.25;0.5;1" dur="1.2s" repeatCount="indefinite"/>
+              <rect x="129" y="266" width="18" height="24" fill="#FFE6DA" stroke="#2D2A32" stroke-width="3"/>
+              <rect x="128" y="286" width="20" height="50" fill="url(#sockStripes)" stroke="#2D2A32" stroke-width="3"/>
+              <ellipse cx="136" cy="339" rx="14" ry="8" fill="#2D2A32"/>
+            </g>
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -8;0 0" keyTimes="0;0.5;0.75;1" dur="1.2s" repeatCount="indefinite"/>
+              <rect x="153" y="266" width="18" height="24" fill="#FFE6DA" stroke="#2D2A32" stroke-width="3"/>
+              <rect x="152" y="286" width="20" height="50" fill="url(#sockStripes)" stroke="#2D2A32" stroke-width="3"/>
+              <ellipse cx="164" cy="339" rx="14" ry="8" fill="#2D2A32"/>
+            </g>
+            <!-- skirt -->
+            <path d="M110 236 L190 236 L206 276 Q150 288 94 276 Z" fill="#F5A9B8" stroke="#2D2A32" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M98 269 Q150 281 202 269" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+            <path d="M130 240 L124 280 M150 240 L150 283 M170 240 L176 280" stroke="#E48CA0" stroke-width="2" fill="none"/>
+            <!-- hoodie -->
+            <path d="M120 174 Q150 164 180 174 Q192 206 194 244 Q150 256 106 244 Q108 206 120 174 Z" fill="#5BCEFA" stroke="#2D2A32" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M124 178 Q150 196 176 178" fill="none" stroke="#2D2A32" stroke-width="2.5"/>
+            <path d="M130 222 Q150 218 170 222 L168 238 Q150 242 132 238 Z" fill="#48B4E0" stroke="#2D2A32" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M150 236 C142 230 143 223 150 227 C157 223 158 230 150 236 Z" fill="#F5A9B8" stroke="#2D2A32" stroke-width="1.5"/>
+            <path d="M143 184 L141 202 M157 184 L159 202" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="141" cy="204" r="2.6" fill="#FFFFFF"/><circle cx="159" cy="204" r="2.6" fill="#FFFFFF"/>
+            <!-- arms -->
+            <g><animateTransform attributeName="transform" type="rotate" values="-8 124 184;32 124 184;-8 124 184" dur="1.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+              <path d="M124 184 L94 142" stroke="#2D2A32" stroke-width="21" stroke-linecap="round"/>
+              <path d="M124 184 L94 142" stroke="#5BCEFA" stroke-width="15" stroke-linecap="round"/>
+              <circle cx="91" cy="137" r="10" fill="#FFE6DA" stroke="#2D2A32" stroke-width="3"/>
+            </g>
+            <g><animateTransform attributeName="transform" type="rotate" values="-32 176 184;8 176 184;-32 176 184" dur="1.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+              <path d="M176 184 L206 142" stroke="#2D2A32" stroke-width="21" stroke-linecap="round"/>
+              <path d="M176 184 L206 142" stroke="#5BCEFA" stroke-width="15" stroke-linecap="round"/>
+              <circle cx="209" cy="137" r="10" fill="#FFE6DA" stroke="#2D2A32" stroke-width="3"/>
+            </g>
+            <!-- head -->
+            <g><animateTransform attributeName="transform" type="rotate" values="-7 150 176;7 150 176;-7 150 176" dur="1.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+              <path d="M104 96 L98 38 L142 70 Z" fill="#F5A9B8" stroke="#2D2A32" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M110 86 L106 52 L132 70 Z" fill="#FFF0F4"/>
+              <g><animateTransform attributeName="transform" type="rotate" values="0 178 82;0 178 82;-14 178 82;0 178 82;0 178 82" keyTimes="0;0.7;0.78;0.86;1" dur="2.4s" repeatCount="indefinite"/>
+                <path d="M196 96 L202 38 L158 70 Z" fill="#F5A9B8" stroke="#2D2A32" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M190 86 L194 52 L168 70 Z" fill="#FFF0F4"/>
+              </g>
+              <circle cx="150" cy="124" r="56" fill="#FFE6DA" stroke="#2D2A32" stroke-width="3"/>
+              <path d="M96 116 Q88 152 100 180 Q108 152 108 120 Z" fill="#F5A9B8" stroke="#2D2A32" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M204 116 Q212 152 200 180 Q192 152 192 120 Z" fill="#F5A9B8" stroke="#2D2A32" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M94 122 C90 66 210 66 206 122 C198 104 188 98 178 106 C171 92 160 92 152 106 C144 92 132 92 124 106 C114 98 102 104 94 122 Z" fill="#F5A9B8" stroke="#2D2A32" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M180 80 L166 71 L166 89 Z M180 80 L194 71 L194 89 Z" fill="#5BCEFA" stroke="#2D2A32" stroke-width="2.5" stroke-linejoin="round"/>
+              <circle cx="180" cy="80" r="4" fill="#FFFFFF" stroke="#2D2A32" stroke-width="2"/>
+              <ellipse cx="128" cy="130" rx="8" ry="10" fill="#2D2A32"><animate attributeName="ry" values="10;10;1;10;10" keyTimes="0;0.9;0.94;0.98;1" dur="3.6s" repeatCount="indefinite"/></ellipse>
+              <circle cx="131" cy="126" r="3" fill="#FFFFFF"><animate attributeName="r" values="3;3;0;3;3" keyTimes="0;0.9;0.94;0.98;1" dur="3.6s" repeatCount="indefinite"/></circle>
+              <ellipse cx="172" cy="130" rx="8" ry="10" fill="#2D2A32"><animate attributeName="ry" values="10;10;1;10;10" keyTimes="0;0.9;0.94;0.98;1" dur="3.6s" repeatCount="indefinite"/></ellipse>
+              <circle cx="175" cy="126" r="3" fill="#FFFFFF"><animate attributeName="r" values="3;3;0;3;3" keyTimes="0;0.9;0.94;0.98;1" dur="3.6s" repeatCount="indefinite"/></circle>
+              <ellipse cx="113" cy="148" rx="10" ry="5.5" fill="#F5A9B8" opacity=".85"/>
+              <ellipse cx="187" cy="148" rx="10" ry="5.5" fill="#F5A9B8" opacity=".85"/>
+              <path d="M141 147 Q145.5 153 150 147 Q154.5 153 159 147" fill="none" stroke="#2D2A32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </g></g>
+        </svg>
+      </button>
+    </div>
+    <p class="note catnote">she is not financial advice. she is a cat :3</p>
+  </section>
+  <section class="screen guide" id="s-guide" aria-label="Guide"></section>
+</main>
+
+<div class="tabbar"><nav role="tablist">
+  <button role="tab" data-tab="home"><span class="e">🎀</span>home<span class="badge" id="badge" hidden></span></button>
+  <button role="tab" data-tab="bills"><span class="e">🧾</span>bills</button>
+  <button role="tab" data-tab="money"><span class="e">💸</span>money</button>
+  <button role="tab" data-tab="kitty"><span class="e">🐱</span>nya~</button>
+  <button role="tab" data-tab="guide"><span class="e">✨</span>guide</button>
+</nav></div>
+
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="grab"></div>
+  <header><h3 id="sheetTitle"></h3><button class="btn soft" id="sheetClose">close</button></header>
+  <div class="inner" id="sheetBody"></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script id="logic">
+/* ---------- lists (from the spreadsheet's Lists tab) ---------- */
+var CATS=["🏠 Housing/Rent","⚡ Utilities","🛡️ Insurance","📺 Subscriptions","💳 Debt/Loans","💊 Medical/HRT","🩺 Gender-Affirming Care","🎀 Wardrobe/Closet","💅 Self-Care/Beauty","📄 Legal (Name/ID Change)","🚗 Transportation","🛒 Groceries/Essentials","🎉 Fun/Personal","✨ Other/Misc"];
+var FREQ={"Monthly":1,"Quarterly":3,"Semi-Annually":6,"Annually":12,"One-Time":0};
+var AFFIRMATIONS=["you're so real for budgeting like this 🎀","soft girl, stacked coins 💰","your future self says thank you 🥹","paying bills on time is giving main character energy","small steps, big glow up ✨","euphoria and emergency funds, name a more iconic duo","the girls that budget are the girls that thrive 💅","progress not perfection, bestie","her: exists. also her: has a fully automated bill tracker","you deserve every good thing coming your way 🏳️‍⚧️","financially responsible AND thriving? she's multitasking","this is your sign to check your bank app... it's probably fine","you're built different (in a well-organized-spreadsheet way)","look at you, being stable AND stylish"];
+
+/* ---------- date math, done in whole days like a spreadsheet ---------- */
+var DAY=86400000;
+function toDays(s){ if(!s) return null; var p=String(s).split("-").map(Number); if(p.length<3||!p[0]) return null; return Math.round(Date.UTC(p[0],p[1]-1,p[2])/DAY); }
+function parts(n){ var d=new Date(n*DAY); return {y:d.getUTCFullYear(),m:d.getUTCMonth()+1,d:d.getUTCDate(),dow:d.getUTCDay()}; }
+function toISO(n){ var p=parts(n); return p.y+"-"+String(p.m).padStart(2,"0")+"-"+String(p.d).padStart(2,"0"); }
+function todayDays(){ var t=new Date(); return Math.round(Date.UTC(t.getFullYear(),t.getMonth(),t.getDate())/DAY); }
+function wd(n){ return ((parts(n).dow+6)%7)+1; }            /* Excel WEEKDAY(x,2): Mon=1 … Sun=7 */
+function mod(a,n){ return ((a%n)+n)%n; }                    /* Excel MOD sign rules */
+function edate(n,k){ var p=parts(n); var tot=p.y*12+(p.m-1)+k; var ny=Math.floor(tot/12), nm=tot-ny*12; var last=new Date(Date.UTC(ny,nm+1,0)).getUTCDate(); return Math.round(Date.UTC(ny,nm,Math.min(p.d,last))/DAY); }
+function monthsBetween(a,b){ var A=parts(a),B=parts(b); var m=(B.y-A.y)*12+(B.m-A.m); if(B.d<A.d) m--; return Math.max(0,m); } /* DATEDIF "m" */
+function wedOnOrBefore(n){ return n-mod(wd(n)-3,7); }
+function wedOnOrAfter(n){ return n+mod(3-wd(n),7); }
+function num(v){ if(v===""||v===null||v===undefined) return null; var x=Number(v); return isFinite(x)?x:null; }
+
+/* ---------- the ⚙️ Engine tab, one bill at a time ---------- */
+function computeBill(b,T){
+  var out={next:null,saveBy:null,weeksLeft:null,weekly:null,saved:null,needed:null,pct:null,status:null,key:null,missingStart:false};
+  if(!b||!b.name) return out;
+  var due=toDays(b.due); if(due===null) return out;
+  var iv=FREQ[b.freq]; if(iv===undefined) iv=0;
+  var oneTime=b.freq==="One-Time";
+  var C=0;
+  if(!oneTime && iv>0 && T>due){
+    var B=monthsBetween(due,T), q=Math.floor(B/iv);
+    C=q+(edate(due,q*iv)<T?1:0);
+  }
+  var D=oneTime?due:edate(due,C*iv);
+  var E=wedOnOrBefore(D);
+  var G=null;
+  if(oneTime){ var S=toDays(b.start); G=S===null?null:wedOnOrAfter(S); if(S===null) out.missingStart=true; }
+  else { var F=edate(D,-iv); G=wedOnOrBefore(F)+7; }
+  var V=wedOnOrAfter(T);
+  var I=Math.max(0,(E-V)/7+1);
+  out.next=D; out.saveBy=E; out.weeksLeft=I;
+  var amt=num(b.amount);
+  var M=null;
+  if(G!==null && amt!==null){
+    var H=Math.max(1,(E-G)/7+1);
+    var J=amt/H, K=Math.max(0,H-I);
+    var L=Math.min(amt,J*K);
+    M=Math.max(0,amt-L);
+    out.saved=L; out.needed=M; out.pct=amt>0?L/amt:null;
+    out.weekly=M===0?0:(I<=1?M:Math.min(J,M));
+  }
+  if(M===0){out.status="✅ fully funded";out.key="funded";}
+  else if(D<T){out.status="🚨 overdue - fix this today";out.key="overdue";}
+  else if(I<=1){out.status="⏳ due this week";out.key="week";}
+  else if(I<=2){out.status="⚠️ coming up soon";out.key="soon";}
+  else {out.status="💪 on track";out.key="track";}
+  return out;
+}
+
+</script>
+
+<script>
+(function(){
+"use strict";
+/* ---------- state + storage ---------- */
+var LS_KEY="bestie-bill-tracker-v1", TAB_KEY="bestie-bill-tracker-tab";
+var state={bills:[],hrt:[],paycheck:0,updatedAt:null};
+var affIdx=Math.floor(Math.random()*AFFIRMATIONS.length), vibeSeed=Math.random();
+var tab="home";
+
+function clone(o){ return JSON.parse(JSON.stringify(o)); }
+function normalize(d){
+  d=d||{};
+  return {bills:Array.isArray(d.bills)?d.bills.filter(Boolean):[],hrt:Array.isArray(d.hrt)?d.hrt.filter(Boolean):[],paycheck:num(d.paycheck)||0,updatedAt:d.updatedAt||null};
+}
+function readCache(){ try{ var s=localStorage.getItem(LS_KEY); return s?normalize(JSON.parse(s)):null; }catch(e){ return null; } }
+function writeCache(){ try{ localStorage.setItem(LS_KEY,JSON.stringify(state)); }catch(e){} }
+try{ var t0=localStorage.getItem(TAB_KEY); if(t0) tab=t0; }catch(e){}
+var cached=readCache();
+if(cached) state=cached;
+else state={bills:[
+  {id:"ex1",name:"🌟 Example: One-Time Bill (edit or delete me)",cat:"✨ Other/Misc",freq:"One-Time",amount:100,due:"2026-10-14",start:"2026-09-23",notes:"This is the exact $100-in-4-weeks example — watch weeks remaining and saved so far update as Wednesdays pass."},
+  {id:"ex2",name:"🌟 Example: Recurring Bill, due on a Friday (edit or delete me)",cat:"⚡ Utilities",freq:"Monthly",amount:60,due:"2026-10-30",start:"",notes:"Due date is a FRIDAY — see how 'money must be saved by' rounds back to the Wednesday before it, and next month it rolls forward on its own."}
+],hrt:[],paycheck:0,updatedAt:null};
+
+function commit(){ state.updatedAt=new Date().toISOString(); writeCache(); render(); }
+
+/* ---------- formatting ---------- */
+var money=new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"});
+function $m(v){ return v===null||v===undefined?"—":money.format(v); }
+var MON=["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"], WDS=["sun","mon","tue","wed","thu","fri","sat"], WDL=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+function fdate(n,withDow){ if(n===null||n===undefined) return "—"; var p=parts(n), T=parts(todayDays()); return (withDow?WDS[p.dow]+", ":"")+MON[p.m-1]+" "+p.d+(p.y!==T.y?", "+p.y:""); }
+function esc(s){ return String(s===null||s===undefined?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
+function plural(n,w){ return n+" "+w+(n===1?"":"s"); }
+function uid(){ return Math.random().toString(36).slice(2,10)+Date.now().toString(36).slice(-4); }
+function toast(msg){ var t=document.getElementById("toast"); t.textContent=msg; t.classList.add("on"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("on");},2200); }
+
+/* ---------- derived numbers ---------- */
+function derive(){
+  var T=todayDays();
+  var bills=state.bills.map(function(b){ return {b:b,c:computeBill(b,T)}; });
+  bills.sort(function(x,y){ var a=x.c.next, b=y.c.next; if(a===null&&b===null) return 0; if(a===null) return 1; if(b===null) return -1; return a-b; });
+  var tot={amount:0,weekly:0,saved:0,needed:0};
+  var cats={}; CATS.forEach(function(k){ cats[k]={weekly:0,owed:0,count:0}; });
+  bills.forEach(function(x){
+    var a=num(x.b.amount); if(a!==null) tot.amount+=a;
+    if(x.c.weekly!==null) tot.weekly+=x.c.weekly;
+    if(x.c.saved!==null) tot.saved+=x.c.saved;
+    if(x.c.needed!==null) tot.needed+=x.c.needed;
+    var k=cats[x.b.cat]; if(k){ k.count++; if(x.c.weekly!==null) k.weekly+=x.c.weekly; if(x.c.needed!==null) k.owed+=x.c.needed; }
+  });
+  var pay=num(state.paycheck)||0;
+  return {T:T,bills:bills,tot:tot,cats:cats,pay:pay,left:pay-tot.weekly,payday:wedOnOrAfter(T)};
+}
+function vibe(left){
+  var i=Math.floor(vibeSeed*3);
+  if(left<0) return ["bad",["🚨 bestie we need to talk, you are in the red — lower a bill or raise the income","😬 the numbers are not mathing rn, might wanna adjust something","💸 the budget said no — revisit a bill or the paycheck amount"][i]];
+  if(left===0) return ["meh","😐 exactly zero leftover, it is giving tight budget"];
+  if(left<50) return ["meh",["🙂 you are good, stay mindful out here","😌 balanced era, keep it up","🌱 steady growth, we respect the grind"][i]];
+  return ["good",["💅 you are thriving, secure the bag and maybe treat yourself a lil","👑 mother is providing AND saving, we love an efficient queen","✨ look at you being financially stable, it is giving healed"][i]];
+}
+function buildAlerts(d){
+  var out=[];
+  d.bills.forEach(function(x){
+    var b=x.b,c=x.c; if(!c.key) return;
+    if(x.c.missingStart) out.push({l:2,ic:"📝",t:"add a saving start date for "+b.name,s:"one-time bills need one so the weekly math can kick in",bill:b.id});
+    if(c.key==="overdue") out.push({l:0,ic:"🚨",t:b.name+" is overdue",s:"was due "+fdate(c.next,true)+". "+(c.needed!==null?$m(c.needed)+" still needed, fix this today":"fix this today"),bill:b.id});
+    else if(c.key==="week") out.push({l:1,ic:"⏳",t:b.name+" is due this week",s:"have "+$m(c.needed)+" ready by "+fdate(c.saveBy,true)+" (due "+fdate(c.next,true)+")",bill:b.id});
+    else if(c.key==="soon") out.push({l:2,ic:"⚠️",t:b.name+" is coming up soon",s:"money must be saved by "+fdate(c.saveBy,true)+", "+$m(c.needed)+" to go",bill:b.id});
+  });
+  if(d.pay>0 && d.left<0) out.push({l:1,ic:"💸",t:"bills need more than your paycheck this week",s:"you're "+$m(-d.left)+" short. check the money tab",tab:"money"});
+  out.sort(function(a,b){return a.l-b.l;});
+  return out;
+}
+
+/* ---------- screens ---------- */
+function alertRow(a){
+  var attrs=a.bill?' data-edit-bill="'+esc(a.bill)+'"':' data-go="'+esc(a.tab)+'"';
+  return '<button class="alert l'+a.l+'"'+attrs+'><span class="ic" aria-hidden="true">'+a.ic+'</span><span><span class="at">'+esc(a.t)+'</span><span class="as">'+esc(a.s)+'</span></span></button>';
+}
+function renderHome(d,alerts){
+  var p=parts(d.T);
+  var isWed=d.T===d.payday;
+  var weekly=d.bills.filter(function(x){return x.c.weekly;});
+  var h='<div class="head"><div><h1>hiii bestie</h1><p class="sub">'+WDL[p.dow]+", "+MON[p.m-1]+" "+p.d+'</p></div></div>';
+  h+='<div class="affirm"><div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><p class="lead">🎀 today\'s affirmation</p><blockquote>'+esc(AFFIRMATIONS[affIdx])+'</blockquote><div class="row"><button class="link" id="shuffle">give me another one</button></div></div>';
+  h+='<h2>heads up</h2>';
+  h+=alerts.length?'<div class="alerts">'+alerts.map(alertRow).join("")+'</div>':'<div class="empty"><b>nothing urgent rn ✨</b>no overdue bills and nothing due this week. go touch grass (optional)</div>';
+  h+='<h2>'+(isWed?"it's payday 💸":"next payday")+'</h2><div class="payday">';
+  h+='<div class="note">'+(isWed?"today, set aside":fdate(d.payday,true)+", set aside")+'</div><div class="big">'+$m(d.tot.weekly)+'</div><div class="note">for bills'+(d.pay>0?", and you keep "+'<b class="'+(d.left<0?"neg":"pos")+'">'+$m(d.left)+'</b>':"")+'</div>';
+  if(weekly.length) h+='<ul>'+weekly.map(function(x){return '<li><span>'+esc(x.b.name)+'</span><span class="num">'+$m(x.c.weekly)+'</span></li>';}).join("")+'</ul>';
+  h+='</div>';
+  h+='<h2>phone pings 📲</h2><div class="card"><p style="margin:0 0 6px">this page shows your heads-ups every time you open it. want your phone to nudge you? make a repeating Wednesday reminder in your Reminders app that says <b>"open bills, bestie 💸"</b>.</p><p class="note" style="margin:0">payday check-ins are all this app needs to keep your numbers honest.</p></div>';
+  return h;
+}
+function billCard(x){
+  var b=x.b,c=x.c,pct=c.pct===null?0:Math.max(0,Math.min(1,c.pct));
+  var h='<button class="bill" data-edit-bill="'+esc(b.id)+'"><div class="top"><div class="name">'+esc(b.name)+'</div><div class="amt">'+$m(num(b.amount))+'</div></div>';
+  h+='<div class="tags">'+(c.key?'<span class="chip s-'+c.key+'">'+esc(c.status)+'</span>':'')+(b.cat?'<span class="tag">'+esc(b.cat)+'</span>':'')+(b.freq?'<span class="tag">'+esc(b.freq.toLowerCase())+'</span>':'')+'</div>';
+  if(c.missingStart) h+='<p class="hint">📝 tap to add a saving start date so the weekly math can start</p>';
+  if(c.next===null){ h+='<p class="hint">📅 tap to add a due date</p>'; }
+  else {
+    h+='<div class="facts"><div><small>next due date</small><span>'+fdate(c.next,true)+'</span></div><div><small>money must be saved by</small><span>'+fdate(c.saveBy,true)+'</span></div>';
+    h+='<div><small>weeks remaining</small><span>'+(c.weeksLeft===null?"—":c.weeksLeft+" wks")+'</span></div><div><small>weekly $ to save</small><span>'+$m(c.weekly)+'</span></div></div>';
+    h+='<div class="meter" role="img" aria-label="'+Math.round(pct*100)+' percent funded"><i style="width:'+(pct*100).toFixed(1)+'%"></i></div>';
+    h+='<div class="meterlbl"><span>'+(c.pct===null?"—":Math.round(pct*100)+"% funded")+'</span><span>'+$m(c.saved)+' saved, '+$m(c.needed)+' still needed</span></div>';
+  }
+  if(b.notes) h+='<p class="notes">'+esc(b.notes)+'</p>';
+  return h+'</button>';
+}
+function renderBills(d){
+  var h='<div class="head"><div><h1>bill tracker</h1><p class="sub">'+plural(d.bills.length,"bill")+'</p></div><button class="btn pink" data-new-bill>+ add bill</button></div>';
+  h+='<div class="totals"><div class="stat"><small>total bills</small><strong>'+$m(d.tot.amount)+'</strong></div><div class="stat"><small>weekly $ to save</small><strong>'+$m(d.tot.weekly)+'</strong></div><div class="stat"><small>saved so far</small><strong>'+$m(d.tot.saved)+'</strong></div><div class="stat"><small>still needed</small><strong>'+$m(d.tot.needed)+'</strong></div></div>';
+  h+=d.bills.length?'<div class="list">'+d.bills.map(billCard).join("")+'</div>':'<div class="list"><div class="empty"><b>no bills yet</b>tap "+ add bill" and put in the name, amount and due date. the app does the rest of the math.</div></div>';
+  return h;
+}
+function renderMoney(d){
+  var v=vibe(d.left);
+  var h='<div class="head"><div><h1>money in vs money out</h1></div></div>';
+  h+='<div class="paycheck"><label for="pay">weekly paycheck amount 💵</label><div class="moneyin"><span>$</span><input id="pay" inputmode="decimal" type="text" autocomplete="off" placeholder="0.00" value="'+(d.pay?esc(d.pay):"")+'"></div>';
+  h+='<div class="ledger"><div><span>total weekly savings needed (all bills)</span><span class="num">'+$m(d.tot.weekly)+'</span></div><div class="left"><span>leftover money each week 🫰</span><strong class="num '+(d.left<0?"neg":"pos")+'">'+$m(d.left)+'</strong></div></div>';
+  h+='<div class="vibe '+v[0]+'">'+esc(v[1])+'</div></div>';
+  var pct=d.tot.amount>0?Math.min(1,d.tot.saved/d.tot.amount):0;
+  h+='<h2>📊 the big picture</h2><div class="card"><div class="ledger" style="margin:0"><div><span>all bills combined</span><span class="num">'+$m(d.tot.amount)+'</span></div><div><span>saved so far</span><span class="num">'+$m(d.tot.saved)+'</span></div><div><span>still needed</span><span class="num">'+$m(d.tot.needed)+'</span></div></div><div class="meter" style="margin-top:6px"><i style="width:'+(pct*100).toFixed(1)+'%"></i></div><div class="meterlbl"><span>'+Math.round(pct*100)+'% of everything funded</span></div></div>';
+  var rows=CATS.map(function(k){return [k,d.cats[k]];});
+  var withWeekly=rows.filter(function(r){return r[1].weekly>0;}).sort(function(a,b){return b[1].weekly-a[1].weekly;});
+  var max=withWeekly.length?withWeekly[0][1].weekly:0;
+  h+='<h2>🗂️ weekly savings needed by category</h2>';
+  if(withWeekly.length){
+    h+='<div class="card"><div class="bars">'+withWeekly.map(function(r,i){ return '<div class="barrow"><div class="lbl"><span>'+esc(r[0])+'</span><span class="num">'+$m(r[1].weekly)+'</span></div><div class="bartrack"><i style="width:'+(r[1].weekly/max*100).toFixed(1)+'%;background:'+(i%2?"var(--pink)":"var(--blue)")+'"></i></div></div>'; }).join("")+'</div></div>';
+  } else h+='<div class="empty">once you add bills, this chart shows where your weekly savings go</div>';
+  h+='<div class="card scroll" style="margin-top:10px"><table class="cattable"><thead><tr><th>category</th><th>weekly $</th><th>still owed</th><th># bills</th></tr></thead><tbody>'+rows.map(function(r){ var z=!r[1].count; return '<tr'+(z?' class="zero"':'')+'><td>'+esc(r[0])+'</td><td>'+$m(r[1].weekly)+'</td><td>'+$m(r[1].owed)+'</td><td>'+r[1].count+'</td></tr>'; }).join("")+'</tbody></table></div>';
+  var when=state.updatedAt?new Date(state.updatedAt):null;
+  h+='<p class="note" style="margin-top:14px">last synced: '+(when&&!isNaN(when)?when.toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"numbers recalc every time you open the app")+'</p>';
+  return h;
+}
+function renderGuide(){
+  var h='<div class="head"><div><h1>start here ✨</h1></div></div>';
+  h+='<p>hiii bestie, welcome to your unemployed-final-boss / actually-has-her-life-together bill tracker 🏳️‍⚧️✨. this thing does the math so you don\'t have to. you just plug in numbers and it handles the rest.</p>';
+  h+='<ol>';
+  h+='<li><b>add your bills</b><p>on the bills tab, tap "+ add bill" and fill in the name, category, frequency, total amount and due date. everything else is calculated for you, she\'s doing her job back there.</p></li>';
+  h+='<li><b>the math it does for you, no cap</b><p>weeks remaining = how many Wednesdays are left until the money has to be ready. weekly $ to save = the bill split evenly across those Wednesdays. saved so far and still needed update themselves every Wednesday that passes, you never touch them.</p></li>';
+  h+='<li><b>the Friday → Wednesday rule</b><p>your check comes Wednesdays, so if a bill is due any day that isn\'t a Wednesday, the app rounds the savings deadline back to the Wednesday before it. the cash is sitting there ready before the bill even hits. that\'s "money must be saved by" on each bill, it\'s giving foresight.</p></li>';
+  h+='<li><b>next due date rolls itself forward</b><p>once a recurring bill\'s due date passes, it jumps to the next monthly / quarterly / semi-annual / annual cycle on its own. even if you ignore the app for two months, it catches itself up the second you open it. she is resilient.</p></li>';
+  h+='<li><b>one-time bills work a lil different</b><p>set frequency to one-time and fill in the saving start date (the Wednesday you start setting money aside). that\'s the only time that field shows up.</p></li>';
+  h+='<li><b>the 🐱 nya~ tab is a lil bonus</b><p>a dancing catgirl who hypes up your bill paying. she says a new thing every few seconds, and if you tap her she does a lil spin. she knows your numbers, so she\'ll nudge you if something\'s overdue.</p></li>';
+  h+='<li><b>the 💸 money tab is the big picture</b><p>put in your weekly paycheck and it shows exactly how much you actually keep after bills, plus what you owe by category and a lil chart bc we are visual people.</p></li>';
+  h+='<li><b>notifications</b><p>the home tab collects everything that needs you: overdue bills, bills due this week, and how much to set aside on payday. for lock-screen nudges, set a repeating Wednesday reminder on your phone to open the app.</p></li>';
+  h+='</ol>';
+  h+='<h2>notes from the girlies who built this</h2><p>the two example bills (the ones with 🌟) show exactly how the automation behaves. edit or delete them whenever. there\'s no 40-bill limit anymore, add as many as you want.</p>';
+  h+='<p><b>use it from your home screen icon.</b> your bills save only on this phone, inside whichever place you opened the app. the home screen app and a Safari tab each keep their own separate copy, so pick the icon and stick with it.</p>';
+  h+='<h2>back up your stuff 💾</h2><p>nothing here is stored online, so if you delete the app or clear your data, it\'s gone. every so often, copy a backup and paste it somewhere safe, like the Notes app.</p>';
+  h+='<button class="btn" id="copyBackup" type="button">copy backup</button><div id="backupOut"></div>';
+  h+='<div class="field" style="margin-top:18px"><label for="restoreText">restore from a backup</label><textarea id="restoreText" placeholder="paste a backup here"></textarea></div><button class="btn soft" id="doRestore" type="button">restore backup</button><div id="restoreMsg"></div>';
+  h+='<p style="margin-top:22px">period. go get your bag 💅</p>';
+  return h;
+}
+
+function render(){
+  var d=derive(), alerts=buildAlerts(d);
+  var urgent=alerts.filter(function(a){return a.l<=1;}).length;
+  var badge=document.getElementById("badge");
+  if(urgent){ badge.textContent=urgent; badge.hidden=false; } else badge.hidden=true;
+  var active=document.activeElement, keepPay=active&&active.id==="pay";
+  document.getElementById("s-home").innerHTML=renderHome(d,alerts);
+  document.getElementById("s-bills").innerHTML=renderBills(d);
+  if(!keepPay) document.getElementById("s-money").innerHTML=renderMoney(d);
+  else refreshMoneyLive(d);
+  document.getElementById("s-guide").innerHTML=renderGuide();
+  showTab(tab,true);
+}
+function refreshMoneyLive(d){
+  var scr=document.getElementById("s-money"), tmp=document.createElement("div");
+  tmp.innerHTML=renderMoney(d);
+  var oldL=scr.querySelector(".ledger"), newL=tmp.querySelector(".ledger"); if(oldL&&newL) oldL.replaceWith(newL);
+  var oldV=scr.querySelector(".vibe"), newV=tmp.querySelector(".vibe"); if(oldV&&newV) oldV.replaceWith(newV);
+}
+function showTab(t,silent){
+  if(!document.getElementById("s-"+t)) t="home";
+  tab=t;
+  try{ localStorage.setItem(TAB_KEY,t); }catch(e){}
+  document.querySelectorAll(".screen").forEach(function(s){ s.classList.toggle("on",s.id==="s-"+t); });
+  document.querySelectorAll(".tabbar button").forEach(function(b){ b.setAttribute("aria-selected",b.dataset.tab===t?"true":"false"); });
+  catOnTab(t);
+  if(!silent) window.scrollTo(0,0);
+}
+
+/* ---------- nya~ corner ---------- */
+var PHRASES=[
+  "paying your bills on time is so kewl :3",
+  "nya~ rent's handled, back to the comfy NEET den",
+  "wagies be like 'how do u afford that'. bestie i have a spreadsheet :3",
+  "no wagecage, still pays her bills on time. we exist",
+  "boymode outside, girlmode inside, autopay everywhere :3",
+  "egg cracked, bills paid. character development fr",
+  "E in the bloodstream, $ in the savings. mrrp",
+  "passoid behavior: never missing a due date",
+  "hon or passoid, the electric company does not care. pay it anyway :3",
+  "programmer socks on, bills tab open, we are so back",
+  "touching grass is optional. paying rent is not :3",
+  "comfy NEET arc: blinds closed, bills paid, blahaj acquired",
+  "mrrp! wednesday is savings day, don't forget~",
+  "late fees are literally transphobic. avoid them :3",
+  "the 'tism wanted a spreadsheet and the 'tism got a spreadsheet",
+  "chronically online AND financially responsible?? kewl",
+  "it's not cope if the bills are actually paid :3",
+  "we're all gonna make it, sisters. one wednesday at a time",
+  "nyaa~ u checked ur bills today? so proud of u",
+  "future u after 6 months of E and zero late fees: thriving :3",
+  "mew mew, money due~ (u got this tho)",
+  "unemployed? yes. irresponsible? never :3",
+  "wagie cope vs NEET budgetmaxxing. we are not the same",
+  "budgetmaxxing so hard rn, nya"
+];
+var kittySvg=document.getElementById("kittySvg"), kittyBtn=document.getElementById("kitty"), bubble=document.getElementById("bubble");
+var reduceMotion=false; try{ reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches; }catch(e){}
+var phraseTimer=null, catSeen=false, shownTab=null;
+function catPool(){
+  var d=derive(), extra=[];
+  if(d.tot.weekly>0) extra.push("only "+$m(d.tot.weekly)+" to stash this wednesday. light work for a NEET queen :3");
+  if(d.bills.some(function(x){return x.c.key==="overdue";})) extra.push("psst… something's overdue >_< peek at the bills tab, i believe in u");
+  if(d.pay>0&&d.left<0) extra.push("the numbers r kinda sus rn… check the money tab nya");
+  if(d.bills.length&&d.tot.needed===0) extra.push("every bill fully funded?? ur literally so kewl :3");
+  return PHRASES.concat(extra,extra);
+}
+function nextPhrase(){
+  var pool=catPool(), cur=bubble.textContent, pick=cur, guard=0;
+  while(pick===cur&&guard++<20) pick=pool[Math.floor(Math.random()*pool.length)];
+  bubble.textContent=pick;
+  bubble.classList.remove("pop"); void bubble.offsetWidth; bubble.classList.add("pop");
+}
+function startCat(){
+  if(!reduceMotion&&kittySvg.unpauseAnimations) kittySvg.unpauseAnimations();
+  clearInterval(phraseTimer); phraseTimer=setInterval(nextPhrase,4800);
+}
+function stopCat(){
+  if(kittySvg.pauseAnimations) kittySvg.pauseAnimations();
+  clearInterval(phraseTimer); phraseTimer=null;
+}
+kittyBtn.addEventListener("click",function(){
+  nextPhrase();
+  if(!reduceMotion){ kittyBtn.classList.remove("spin"); void kittyBtn.offsetWidth; kittyBtn.classList.add("spin"); }
+  if(tab==="kitty") startCat();
+});
+kittyBtn.addEventListener("animationend",function(){ kittyBtn.classList.remove("spin"); });
+function catOnTab(t){
+  var changed=t!==shownTab; shownTab=t;
+  if(t==="kitty"&&document.visibilityState!=="hidden"){
+    if(changed&&catSeen) nextPhrase();
+    catSeen=true;
+    if(changed||!phraseTimer) startCat();
+  } else if(changed||phraseTimer) stopCat();
+}
+
+/* ---------- editor sheet ---------- */
+var sheet=document.getElementById("sheet"), scrim=document.getElementById("scrim"), sheetBody=document.getElementById("sheetBody");
+function openSheet(title,html){ document.getElementById("sheetTitle").textContent=title; sheetBody.innerHTML=html; sheet.classList.add("on"); scrim.classList.add("on"); sheetBody.scrollTop=0; }
+function closeSheet(){ sheet.classList.remove("on"); scrim.classList.remove("on"); }
+function opts(list,sel,blank){ return (blank?'<option value="">'+blank+'</option>':'')+list.map(function(o){return '<option'+(o===sel?' selected':'')+'>'+esc(o)+'</option>';}).join(""); }
+
+function billForm(b){
+  var isNew=!b; b=b||{id:"",name:"",cat:"",freq:"Monthly",amount:"",due:"",start:"",notes:""};
+  var c=computeBill(b,todayDays());
+  var h='<form id="billForm" data-id="'+esc(b.id)+'" novalidate>';
+  if(!isNew && c.next!==null){
+    h+='<div class="preview"><div><span>next due date (auto-synced)</span><b>'+fdate(c.next,true)+'</b></div><div><span>money must be saved by (wed)</span><b>'+fdate(c.saveBy,true)+'</b></div><div><span>weeks remaining</span><b>'+(c.weeksLeft===null?"—":c.weeksLeft+" wks")+'</b></div><div><span>weekly $ to save</span><b>'+$m(c.weekly)+'</b></div><div><span>saved so far</span><b>'+$m(c.saved)+'</b></div><div><span>still needed</span><b>'+$m(c.needed)+'</b></div><div><span>status</span><b>'+esc(c.status||"—")+'</b></div></div>';
+  }
+  h+='<div class="field"><label for="f-name">bill name</label><input id="f-name" name="name" value="'+esc(b.name)+'" placeholder="e.g. rent, phone, spironolactone refill" autocomplete="off"></div>';
+  h+='<div id="nameErr"></div>';
+  h+='<div class="field"><label for="f-cat">category</label><select id="f-cat" name="cat">'+opts(CATS,b.cat,"pick one")+'</select></div>';
+  h+='<div class="two"><div class="field"><label for="f-freq">frequency</label><select id="f-freq" name="freq">'+opts(Object.keys(FREQ),b.freq)+'</select></div>';
+  h+='<div class="field"><label for="f-amt">total bill amount</label><input id="f-amt" name="amount" inputmode="decimal" value="'+esc(b.amount)+'" placeholder="0.00"></div></div>';
+  h+='<div class="field"><label for="f-due">due date (next occurrence)</label><input id="f-due" name="due" type="date" value="'+esc(b.due)+'"><div class="help">for recurring bills, any past or upcoming due date works. it rolls forward on its own.</div></div>';
+  h+='<div class="field" id="startWrap"'+(b.freq==="One-Time"?"":" hidden")+'><label for="f-start">saving start date</label><input id="f-start" name="start" type="date" value="'+esc(b.start)+'"><div class="help">the Wednesday you start setting money aside (other days round up to the next Wednesday)</div></div>';
+  h+='<div class="field"><label for="f-notes">notes</label><textarea id="f-notes" name="notes" placeholder="account #, autopay, whatever helps">'+esc(b.notes)+'</textarea></div>';
+  h+='<div class="actions">'+(isNew?'<span></span>':'<button type="button" class="btn danger" id="delBill">delete bill</button>')+'<button type="submit" class="btn">'+(isNew?"add bill":"save changes")+'</button></div></form>';
+  return h;
+}
+function findBill(id){ for(var i=0;i<state.bills.length;i++) if(state.bills[i].id===id) return i; return -1; }
+function cleanAmount(v){ v=String(v||"").replace(/[$,\s]/g,""); if(v==="") return ""; var n=Number(v); return isFinite(n)?Math.round(n*100)/100:""; }
+
+sheetBody.addEventListener("change",function(e){
+  if(e.target.id==="f-freq"){ document.getElementById("startWrap").hidden=e.target.value!=="One-Time"; }
+});
+sheetBody.addEventListener("submit",function(e){
+  e.preventDefault();
+  var f=e.target, fd=new FormData(f), id=f.dataset.id;
+  var name=String(fd.get("name")||"").trim();
+  if(!name){ document.getElementById("nameErr").innerHTML='<p class="err">add a name so it shows up in your list</p>'; f.querySelector("[name=name]").focus(); return; }
+  if(f.id==="billForm"){
+    var b={id:id||uid(),name:name,cat:fd.get("cat")||"",freq:fd.get("freq")||"Monthly",amount:cleanAmount(fd.get("amount")),due:fd.get("due")||"",start:fd.get("freq")==="One-Time"?(fd.get("start")||""):"",notes:String(fd.get("notes")||"").trim()};
+    var i=findBill(b.id); if(i>=0) state.bills[i]=b; else state.bills.push(b);
+    closeSheet(); commit(); toast(id?"bill saved":"bill added 💅");
+  }
+});
+sheetBody.addEventListener("click",function(e){
+  var t=e.target.closest("button"); if(!t) return;
+  if(t.id==="delBill"){
+    if(!t.dataset.armed){ t.dataset.armed="1"; t.textContent="tap again to delete"; return; }
+    var id=sheetBody.querySelector("form").dataset.id;
+    var i=findBill(id); if(i>=0) state.bills.splice(i,1);
+    closeSheet(); commit(); toast("deleted");
+  }
+});
+document.getElementById("sheetClose").addEventListener("click",closeSheet);
+scrim.addEventListener("click",closeSheet);
+document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeSheet(); });
+
+/* ---------- page-level events ---------- */
+document.querySelector(".tabbar").addEventListener("click",function(e){ var b=e.target.closest("button[data-tab]"); if(b) showTab(b.dataset.tab); });
+document.querySelector("main").addEventListener("click",function(e){
+  var el=e.target.closest("button"); if(!el) return;
+  if(el.id==="shuffle"){ var n; do{ n=Math.floor(Math.random()*AFFIRMATIONS.length);}while(n===affIdx&&AFFIRMATIONS.length>1); affIdx=n; render(); return; }
+  if(el.hasAttribute("data-new-bill")) return openSheet("add a bill",billForm(null));
+  if(el.dataset.editBill){ var i=findBill(el.dataset.editBill); if(i>=0) openSheet("edit bill",billForm(state.bills[i])); return; }
+  if(el.dataset.go) showTab(el.dataset.go);
+  if(el.id==="copyBackup"){
+    var code=JSON.stringify({app:"bills-bestie",v:1,bills:state.bills,paycheck:state.paycheck,hrt:state.hrt});
+    var done=function(){ toast("backup copied, paste it in Notes 💾"); };
+    var manual=function(){ document.getElementById("backupOut").innerHTML='<div class="field" style="margin-top:10px"><label for="bk">select all and copy this</label><textarea id="bk" readonly></textarea></div>'; var t=document.getElementById("bk"); t.value=code; t.focus(); t.select(); };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(code).then(done,manual); } else manual();
+    return;
+  }
+  if(el.id==="doRestore"){
+    var msg=document.getElementById("restoreMsg"), raw=document.getElementById("restoreText").value.trim();
+    var data=null; try{ data=JSON.parse(raw); }catch(err){}
+    if(!data||!Array.isArray(data.bills)){ msg.innerHTML='<p class="err" style="margin-top:8px">that doesn\'t look like a backup from this app. copy the whole thing and try again.</p>'; return; }
+    if(!el.dataset.armed){ el.dataset.armed="1"; el.textContent="tap again to replace everything"; msg.innerHTML='<p class="note" style="margin-top:8px">found '+data.bills.length+' bill'+(data.bills.length===1?'':'s')+'. restoring replaces what\'s in the app now.</p>'; return; }
+    state=normalize(data); commit(); toast("backup restored ✨");
+  }
+});
+var payTimer=null;
+document.querySelector("main").addEventListener("input",function(e){
+  if(e.target.id!=="pay") return;
+  var v=cleanAmount(e.target.value); state.paycheck=v===""?0:v;
+  writeCache(); render();
+  clearTimeout(payTimer); payTimer=setTimeout(function(){ state.updatedAt=new Date().toISOString(); writeCache(); },700);
+});
+document.querySelector("main").addEventListener("focusout",function(e){ if(e.target.id==="pay") setTimeout(render,0); });
+
+/* re-check dates when the app comes back to the foreground (e.g. the next morning) */
+document.addEventListener("visibilitychange",function(){
+  if(document.visibilityState==="hidden"){ stopCat(); shownTab=null; return; }
+  if(!sheet.classList.contains("on")) render(); else catOnTab(tab);
+});
+
+render();
+})();
+</script>
+</body>
+</html>
